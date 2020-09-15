@@ -39,7 +39,7 @@ const polyfills = [
 module.exports = {
   entry: {
     polyfill_head: resolve(__dirname, 'src/utils/polyfill.js'),
-    main: resolve(__dirname, 'src/index.js'),
+    main: resolve(__dirname, 'src/index.ts'),
   },
 
   output: {
@@ -64,18 +64,14 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.js$/,
-        exclude: '/node_modules/',
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
-          },
-        ],
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
