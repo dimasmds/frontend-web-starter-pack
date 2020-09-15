@@ -1,0 +1,12 @@
+{
+  "name": "FrontEnd Web Starter Pack",
+  "short_name": "Starter Pack",
+  "description": "My tools stack for built a modern web apps",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#606e6b",
+  "icons": [
+
+  ]
+}
