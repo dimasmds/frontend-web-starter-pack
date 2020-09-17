@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const { GenerateSW } = require('workbox-webpack-plugin');
 const { merge } = require('webpack-merge');
 
 const common = require('./webpack.common');
@@ -30,6 +31,13 @@ module.exports = merge(common, {
     },
   },
   plugins: [
+    new GenerateSW({
+      clientsClaim: true,
+      skipWaiting: true,
+      runtimeCaching: [
+        // runtime caching
+      ],
+    }),
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin({
       analyzerPort: 'auto',
