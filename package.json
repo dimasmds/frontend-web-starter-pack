@@ -23,10 +23,12 @@
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
     "@jest/globals": "^26.4.2",
     "@open-wc/testing": "^2.5.26",
     "@open-wc/testing-helpers": "^1.8.9",
     "@types/html-webpack-plugin": "^3.2.3",
+    "@types/jest": "^26.0.14",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
     "babel-plugin-transform-builtin-classes": "^0.6.1",
