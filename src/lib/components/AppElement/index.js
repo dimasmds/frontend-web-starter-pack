@@ -7,10 +7,22 @@ class AppElement extends CommonElement {
     return [...super.styles, style];
   }
 
+  static get properties() {
+    return {
+      _title: { type: String },
+    };
+  }
+
+  constructor() {
+    super();
+    // eslint-disable-next-line no-underscore-dangle
+    this._title = '';
+  }
+
   render() {
     return html`
       <div class="app">
-        <h1>Hello</h1>
+        <h1>${this._title}</h1>
       </div>
     `;
   }

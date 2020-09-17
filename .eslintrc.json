@@ -5,7 +5,9 @@
         "node": true
     },
     "extends": [
-        "airbnb-base"
+        "airbnb-base",
+        "plugin:jest/recommended",
+        "plugin:lit/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -13,11 +15,15 @@
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "jest",
+        "lit"
     ],
     "rules": {
         "import/extensions":  0,
         "import/no-unresolved": 0,
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        "class-methods-use-this": 0,
+        "no-underscore-dangle": 0
     }
 }
