@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jest-environment-jsdom-sixteen
+ */
+
 // Inject Component
 import '../../src/lib/components/AppElement';
 

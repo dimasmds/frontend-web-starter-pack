@@ -1,5 +1,9 @@
 module.exports = {
-  testEnvironment: 'jest-environment-jsdom-sixteen',
+  preset: 'jest-puppeteer',
+  globals: {
+    URL: 'http://localhost:8080',
+  },
+  verbose: true,
   transformIgnorePatterns: [
     '/node_modules/(?!lit-element|lit-html|@open-wc)',
   ],
