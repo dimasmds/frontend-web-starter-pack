@@ -6,8 +6,8 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "start-dev-sw": "webpack-dev-server --config webpack.dev.sw.js",
-    "build-local": "webpack --config webpack.prod.js",
-    "build": "npm run test && webpack --config webpack.deploy.js",
+    "build-local": "webpack --config webpack.prod.analyzer.js",
+    "build": "npm run test && webpack --config webpack.prod.js",
     "test": "jest"
   },
   "repository": {

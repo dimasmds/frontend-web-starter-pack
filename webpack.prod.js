@@ -1,5 +1,4 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { GenerateSW } = require('workbox-webpack-plugin');
 const { merge } = require('webpack-merge');
 
@@ -39,8 +38,5 @@ module.exports = merge(common, {
       ],
     }),
     new CleanWebpackPlugin(),
-    new BundleAnalyzerPlugin({
-      analyzerPort: 'auto',
-    }),
   ],
 });
