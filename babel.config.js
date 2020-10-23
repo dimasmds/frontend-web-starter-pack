@@ -11,8 +11,17 @@ module.exports = {
     '@babel/preset-typescript',
   ],
   plugins: [
-    ['babel-plugin-transform-builtin-classes', {
-      globals: ['Array', 'Error', 'HTMLElement'],
-    }],
+    [
+      'babel-plugin-transform-builtin-classes',
+      {
+        globals: ['Array', 'Error', 'HTMLElement'],
+      },
+    ],
+    [
+      '@babel/plugin-proposal-decorators', { legacy: true },
+    ],
+    [
+      '@babel/plugin-proposal-class-properties',
+    ],
   ],
 };

@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "moduleResolution": "Node",
     "noImplicitAny": true,
     "module": "esnext",
-    "target": "es5",
+    "target": "es6",
     "jsx": "react",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true
   }
 }

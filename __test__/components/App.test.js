@@ -15,16 +15,16 @@ import {
 describe('App Component Test', () => {
   it('should have title property with default empty string', async () => {
     const el = await fixture('<app-element></app-element>');
-    expect(el._title).toEqual('');
+    expect(el.title).toEqual('');
   });
 
   it('should have title property with correctly value', async () => {
-    const el = await fixture('<app-element _title="Hello"></app-element>');
-    expect(el._title).toEqual('Hello');
+    const el = await fixture('<app-element title="Hello"></app-element>');
+    expect(el.title).toEqual('Hello');
   });
 
   it('should rendered with correctly property value', async () => {
-    const el = await fixture('<app-element _title="Hello"></app-element>');
+    const el = await fixture('<app-element title="Hello"></app-element>');
     const renderedHtml = removeUnnecessaryLitAdditionalString(el.shadowRoot.innerHTML);
 
     expect(removeAllWhiteSpace(renderedHtml))

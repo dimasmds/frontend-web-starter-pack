@@ -50,12 +50,14 @@ module.exports = {
       {
         test: /\.css|\.s([ca])ss$/,
         exclude: resolve(__dirname, 'src/styles'),
-        use: [{
-          loader: 'lit-scss-loader',
-          options: {
-            minify: true,
-          },
-        }, 'extract-loader', 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: 'lit-scss-loader',
+            options: {
+              minify: true,
+            },
+          }, 'extract-loader', 'css-loader', 'sass-loader'],
+
       },
       {
         test: /\.css|\.s([ca])ss$/,
@@ -64,7 +66,17 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+            },
+          },
+          {
+            loader: 'ts-loader',
+          },
+        ],
         exclude: /node_modules/,
       },
     ],

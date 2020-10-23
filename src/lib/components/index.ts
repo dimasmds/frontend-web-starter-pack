@@ -1,1 +1,1 @@
-import './AppElement';
+import './AppElement/index';
