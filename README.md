@@ -19,7 +19,3 @@ To use this starter pack is quite easy. Download or Clone this repository. Then 
 - `npm run build` build a project in production mode with test validation.
 - `npm run test` running test.
 
-## Notes
-- Use js instead of ts for creating Web Components. Because it will cause an error. For now, I don't have an idea how to solve this problem. I really appreciate it if you would like to try to fix this.
-
-
